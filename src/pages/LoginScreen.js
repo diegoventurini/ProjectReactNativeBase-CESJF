@@ -1,7 +1,10 @@
 import React from 'react';
-import { View, TextInput, Button, Alert, ActivityIndicator } from 'react-native';
-import firebase from 'firebase';
+import { View, Text, TextInput, Button, Alert, ActivityIndicator } from 'react-native';
+//import firebase from 'firebase';
 import { useNavigation } from '@react-navigation/native';
+import firebase from '../database/Firebase';
+import {Fab} from "../styles/styles";
+
 
 class LoginScreen extends React.Component {
 
@@ -16,6 +19,8 @@ class LoginScreen extends React.Component {
     }
 
     componentDidMount() {    
+
+ /*       
         // Your web app's Firebase configuration
         var firebaseConfig = {
             apiKey: "AIzaSyA7RSbq5qTWa3jiVCMstMUWCJv_SEKBpJI",
@@ -33,6 +38,8 @@ class LoginScreen extends React.Component {
             firebase.initializeApp(firebaseConfig);
             
         }    
+
+    */    
 
     }
 
@@ -120,8 +127,10 @@ class LoginScreen extends React.Component {
                             onChangeText={(value)=>this.onChangePassword(value)}
                 />
 
-                { this.renderButton() }
+                { this.renderButton() }     
                 
+
+                <Fab><Text>+</Text></Fab>
 
             </View>
         );

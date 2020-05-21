@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginScreen from './src/pages/LoginScreen';
-import SecondScreen from './src/pages/SecondScreen';
+//import SecondScreen from './src/pages/SecondScreen';
+import ContentScreen from './src/pages/ContentScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -11,7 +12,24 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="LoginScreen" component={LoginScreen} 
+      <Stack.Screen name="ContentScreen" component={ContentScreen}
+        options={{ 
+          title: 'Conteúdo',
+          headerStyle: {
+            backgroundColor: '#103596',
+            borderBottomColor: '#ffffff',
+            borderBottomWidth: 1 ,
+          },
+          
+          headerTitleStyle: {
+            color: '#ffffff',
+            fontzise: 30
+          },
+        }}
+      
+      
+      />
+      <Stack.Screen name="LoginScreen" component={LoginScreen} 
         options={{ 
           title: 'My App React',
           headerStyle: {
@@ -25,7 +43,6 @@ export default function App() {
             fontzise: 30
           },
         }}/>
-        <Stack.Screen name="SecondScreen" component={SecondScreen}/>
       </Stack.Navigator>
       </NavigationContainer>
     );
