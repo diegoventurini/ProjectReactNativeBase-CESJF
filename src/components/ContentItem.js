@@ -3,26 +3,24 @@ import { TouchableOpacity } from 'react-native';
 import { ViewItem, LineText, FakeImage } from '../styles/styles';
 
 const ContentItem = (props) => {
-
-    const { name, img, desc, id } = props;
+    const { name, img, desc, id, onPress } = props;
 
     function renderImg(img) {
-        if(img) {
-           return <FakeImage source={{uri: img}}/>
-
+        if (img) {
+            return <FakeImage source={{uri: img}}/>
         } else {
             return <FakeImage/>
+        }
 
     }
-    return(
-        <TouchableOpacity>
-            <ViewItem/>
-            {renderImg(img)}
-                <FakeImage></FakeImage>
-                <LineText fontSize="20px">{ name }</LineText>
-            <ViewItem/>
 
-        </TouchableOpacity>
+    return(
+        <TouchableOpacity onPress={()=>onPress()}>
+            <ViewItem>
+            {renderImg(img)}
+            <LineText fontSize="20px">{ name }</LineText>
+            </ViewItem>
+        </TouchableOpacity>    
     )
 }
 

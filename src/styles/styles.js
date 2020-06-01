@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
 
 export const VieW = styled.View`
     background: #ffffff;
@@ -9,18 +9,16 @@ export const VieW = styled.View`
     margin-left: ${props => props.marginleft || 0};
     margin-right: ${props => props.marginright || 0};
     margin-bottom: ${props => props.marginbottom || 0};
-`;    
+`;
 
 export const ViewItem = styled.View`
     height: 60px;
     border-bottom-width: 2px;
-    border-bottom-collor: black;
+    border-bottom-color: black;
     display: flex;
     flex-direction: row;
-    align-Items: center;
-        
-`;    
-
+    align-items: center;
+`;
 
 export const FakeImage = styled.Image`
     height: 50px;
@@ -29,21 +27,18 @@ export const FakeImage = styled.Image`
     justify-content: center;
     align-Items: center;
     background-color: #06f;
-    margin-left: ${props => props.marginleft || 10};
-`; 
-
+    margin-left: ${props => props.maginLeft || 10};
+`;
 
 export const TexT = styled.Text`
     font-size: ${props => props.fontSize || 30};
-    color: #ffffff;
-`;    
+    color: #FFFFFF;
+`;
 
 export const LineText = styled.Text`
     font-size: ${props => props.fontSize || 30};
-    margin-left: ${props => props.marginleft || 10};
-    
-`;    
-
+    margin-left: ${props => props.maginLeft || 10};
+`;
 
 export const Fab = styled.TouchableOpacity`
     height: 50px;
@@ -56,3 +51,4 @@ export const Fab = styled.TouchableOpacity`
     align-Items: center;
     background-color: #06f;
 `;
+
